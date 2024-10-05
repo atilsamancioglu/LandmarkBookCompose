@@ -26,12 +26,10 @@ import androidx.navigation.NavController
 
 @Composable
 fun DetailScreen(
-    landmark: Landmark,
-    navController: NavController
-) {
+    landmark: Landmark) {
     Box(modifier = Modifier
         .fillMaxSize()
-        .background(Color.Black),
+        .background(color = MaterialTheme.colorScheme.primaryContainer),
         contentAlignment = Alignment.Center,
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -40,7 +38,7 @@ fun DetailScreen(
                 style = MaterialTheme.typography.displayLarge,
                 modifier = Modifier.padding(2.dp),
                 fontWeight = FontWeight.Bold,
-                color = Color.White,
+                color = Color.Black,
                 textAlign = TextAlign.Center
             )
 
@@ -48,16 +46,16 @@ fun DetailScreen(
                 contentDescription = landmark.name,
                 modifier = Modifier
                     .padding(16.dp)
-                    .size(200.dp, 200.dp)
-                    .clip(CircleShape)
-                    .border(2.dp, Color.Gray, CircleShape)
+                    .size(300.dp, 200.dp)
+                    //.clip(CircleShape)
+                    //.border(2.dp, Color.Gray, CircleShape)
             )
 
             Text(text = landmark.country,
                 style = MaterialTheme.typography.displaySmall,
                 modifier = Modifier.padding(2.dp),
                 fontWeight = FontWeight.Bold,
-                color = Color.Green,
+                color = Color.Black,
                 textAlign = TextAlign.Center
 
             )
